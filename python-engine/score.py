@@ -31,30 +31,48 @@ def extract_text(pdf_path):
 def evaluate_resume_fixed(resume_text, job_desc):
 
     prompt = f"""
-You are an expert technical recruiter. Analyze this resume against the job description.
 
-Job Description:
+You are an expert technical recruiter.
+
+Analyze the candidate's resume against the provided job description.
+
+JOB DESCRIPTION:
 {job_desc}
 
-Resume Text:
+RESUME:
 {resume_text}
 
-Provide your response in the following exact format:
+Return ONLY a valid JSON object.
 
----
-### 📊 MATCH SCORE: [0-100]%
+Do not use Markdown.
+Do not use ```json fences.
+Do not include explanations outside the JSON.
 
-### ✅ KEY STRENGTHS:
-- [Strength 1]
-- [Strength 2]
+Use exactly this structure:
 
-### ❌ MISSING SKILLS & GAPS:
-- [Gap 1]
-- [Gap 2]
+{{
+  "candidate_name": "Candidate name from the resume",
+  "match_score": 0,
+  "key_strengths": [
+    "strength 1",
+    "strength 2"
+  ],
+  "missing_skills": [
+    "missing skill 1",
+    "missing skill 2"
+  ],
+  "final_verdict": "Strong Fit",
+  "explanation": "Brief explanation of the candidate's match with the job description."
+}}
 
-### 📝 FINAL VERDICT:
-[Strong Fit / Potential Fit / Not a Fit] - [1-2 sentences explaining why]
----
+Rules:
+- match_score must be a number between 0 and 100.
+- key_strengths must always be a JSON array of strings.
+- missing_skills must always be a JSON array of strings.
+- final_verdict must be one of: "Strong Fit", "Potential Fit", "Not a Fit".
+- explanation must be a string.
+- candidate_name should be taken from the resume. If the name cannot be determined, use "Unknown".
+- Return valid JSON only.
 """
 
     for attempt in range(3):
