@@ -273,12 +273,16 @@ def show_dashboard_page():
         st.markdown("<br>", unsafe_allow_html=True)
         st.subheader("🏆 Top Candidates")
 
-        top_n = st.slider(
+        if total_candidates == 1:
+            top_n = 1
+        else:
+             top_n = st.slider(
             "Number of top candidates to show",
             min_value=1,
-            max_value=min(10, total_candidates),
+            max_value=total_candidates,
             value=min(3, total_candidates),
-        )
+    )
+
         top_df = df.sort_values("match_score", ascending=False).head(top_n).reset_index(drop=True)
         medals = ["🥇", "🥈", "🥉"]
 
@@ -353,6 +357,11 @@ def show_dashboard_page():
     # ===================================================================
     with tab_candidates:
         st.subheader("Candidate List")
+
+
+
+        if "email" not in df.columns:
+                df["email"] = ""
 
         table_df = df[["candidate_name", "email", "match_score", "final_verdict"]].rename(
             columns={
