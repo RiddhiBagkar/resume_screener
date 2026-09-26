@@ -1,0 +1,47 @@
+[
+  {
+    "candidate_name": "Shivani Rao",
+    "email": "shivani.rao@example.com",
+    "match_score": 82,
+    "final_verdict": "Strong Fit",
+    "key_strengths": ["Python", "SQL", "Power BI"],
+    "missing_skills": ["AWS"],
+    "explanation": "Shivani has 4 years of experience in data analysis with strong SQL and Power BI skills that directly match the job requirements. She is missing hands-on cloud (AWS) experience, which is a minor gap."
+  },
+  {
+    "candidate_name": "Rahul Mehta",
+    "email": "rahul.mehta@example.com",
+    "match_score": 74,
+    "final_verdict": "Potential Fit",
+    "key_strengths": ["Python", "Tableau"],
+    "missing_skills": ["SQL", "Statistics"],
+    "explanation": "Rahul shows solid visualization skills with Tableau and Python, but lacks the SQL depth and statistical background the role asks for. Could be considered with some upskilling."
+  },
+  {
+    "candidate_name": "Priya Nair",
+    "email": "priya.nair@example.com",
+    "match_score": 91,
+    "final_verdict": "Strong Fit",
+    "key_strengths": ["Python", "SQL", "Statistics", "Power BI"],
+    "missing_skills": [],
+    "explanation": "Priya's resume closely matches all major requirements: strong SQL, Python, statistics and BI tooling experience with 5+ years in a similar role. No significant gaps found."
+  },
+  {
+    "candidate_name": "Arjun Verma",
+    "email": "arjun.verma@example.com",
+    "match_score": 48,
+    "final_verdict": "Not Fit",
+    "key_strengths": ["Excel"],
+    "missing_skills": ["Python", "SQL", "Power BI", "Statistics"],
+    "explanation": "Arjun's background is mainly in Excel-based reporting with less than a year of experience. He is missing most of the core technical skills required for this Data Analyst role."
+  },
+  {
+    "candidate_name": "Neha Kulkarni",
+    "email": "neha.kulkarni@example.com",
+    "match_score": 65,
+    "final_verdict": "Potential Fit",
+    "key_strengths": ["SQL", "Power BI"],
+    "missing_skills": ["Python", "Statistics"],
+    "explanation": "Neha has good BI tooling and SQL experience from 2 years in a reporting role, but has not worked with Python or formal statistical methods yet."
+  }
+]
