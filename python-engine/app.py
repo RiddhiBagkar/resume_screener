@@ -32,7 +32,7 @@ DATA_FILE = Path(__file__).parent / "data" / "candidates.json"
 VERDICT_COLORS = {
     "Strong Fit": "#22C55E",
     "Potential Fit": "#FACC15",
-    "Not Fit": "#EF4444",
+    "Not a Fit": "#EF4444",
 }
 
 
@@ -261,8 +261,8 @@ def show_dashboard_page():
     with tab_overview:
         total_candidates = len(df)
         average_score = round(df["match_score"].mean(), 1)
-        eligible_count = (df["final_verdict"] != "Not Fit").sum()
-        not_eligible_count = (df["final_verdict"] == "Not Fit").sum()
+        eligible_count = (df["final_verdict"].isin(["Strong Fit", "Potential Fit"])).sum()
+        not_eligible_count = (df["final_verdict"] == "Not a Fit").sum()
 
         card1, card2, card3, card4 = st.columns(4)
         card1.metric("Total Candidates", total_candidates)
@@ -276,14 +276,17 @@ def show_dashboard_page():
         if total_candidates == 1:
             top_n = 1
         else:
-             top_n = st.slider(
-            "Number of top candidates to show",
-            min_value=1,
-            max_value=total_candidates,
-            value=min(3, total_candidates),
-    )
+            top_n = st.slider(
+                "Number of top candidates to show",
+                min_value=1,
+                max_value=total_candidates,
+                value=min(3, total_candidates),
+            )
 
-        top_df = df.sort_values("match_score", ascending=False).head(top_n).reset_index(drop=True)
+        top_df = df[df["final_verdict"].isin(["Strong Fit", "Potential Fit"])] \
+            .sort_values("match_score", ascending=False) \
+            .head(top_n).reset_index(drop=True)
+
         medals = ["🥇", "🥈", "🥉"]
 
         top_cols = st.columns(len(top_df))
