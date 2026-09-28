@@ -214,5 +214,6 @@ n8n (in Docker) sends requests to the Flask server using the WSL IP address, for
 Detailed documentation for each part of the project:
 
 - [Python Implementation](docs/Python_Implementation.pdf)
-- [Ubuntu / WSL Environment](docs/Ubuntu_WSL_Environment.docx)
-- [Python–n8n Integration and Workflow](docs/Python_n8n_Integration_and_Workflow.docx)
+- [Ubuntu / WSL Environment](docs/Ubuntu_WSL_Environment.pdf)
+- [Python–n8n Integration and Workflow](docs/Python_n8n_Integration_and_Workflow.pdf)
+- [n8n_in_ai_resume_screening_system](docs/n8n_in_AI_Resume_Screening_System.pdf)
