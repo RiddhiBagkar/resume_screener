@@ -5,7 +5,6 @@ import pdfplumber
 
 from score import evaluate_resume_fixed
 
-
 def extract_text(pdf_path):
     """Extract text from a PDF."""
     with pdfplumber.open(pdf_path) as pdf:
