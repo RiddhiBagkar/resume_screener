@@ -289,7 +289,7 @@ def show_dashboard_page():
 
         medals = ["🥇", "🥈", "🥉"]
 
-        top_cols = st.columns(len(top_df))
+        top_cols = st.columns(max(1, len(top_df)))
         for i, (col, row) in enumerate(zip(top_cols, top_df.itertuples())):
             rank_label = medals[i] if i < len(medals) else f"#{i + 1}"
             with col:

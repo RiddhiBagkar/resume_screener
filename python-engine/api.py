@@ -27,8 +27,7 @@ def screen_resume():
 
     # Save resume temporarily
     temp_dir = tempfile.gettempdir()
-    resume_path = os.path.join(temp_dir, resume.filename)
-
+    resume_path = os.path.join(temp_dir, f"resume_{os.getpid()}_{next(tempfile._get_candidate_names())}.pdf")
     resume.save(resume_path)
 
     # Prepare data for existing Python screening engine

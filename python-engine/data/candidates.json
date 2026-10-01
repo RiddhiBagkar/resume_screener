@@ -1,20 +1,68 @@
 [
     {
-        "candidate_name": "Unknown",
+        "candidate_name": "John Smith",
         "match_score": 15,
         "key_strengths": [
-            "Workflow automation (n8n)",
-            "LLM integration and prompt engineering",
-            "API configuration and data parsing"
+            "Basic exposure to Python via introductory coursework",
+            "Familiarity with Microsoft Excel for basic data entry"
+        ],
+        "missing_skills": [
+            "SQL",
+            "Power BI",
+            "Data Visualization",
+            "Intermediate to Advanced Python proficiency"
+        ],
+        "final_verdict": "Not a Fit",
+        "explanation": "The candidate's background is primarily in IT support and web basics, lacking essential Data Analyst skills such as SQL, Power BI, data visualization experience, and professional Python expertise.",
+        "success": true
+    },
+    {
+        "candidate_name": "Aryan Dubey",
+        "match_score": 25,
+        "key_strengths": [
+            "Proficiency in SQL and relational database concepts (MySQL, PostgreSQL)",
+            "Strong technical foundation in computer science and software development"
         ],
         "missing_skills": [
             "Python",
-            "SQL",
             "Power BI",
-            "Data visualization"
+            "Data Visualization tools and techniques",
+            "Data Analysis and business reporting experience"
         ],
         "final_verdict": "Not a Fit",
-        "explanation": "The submitted text is a project planning document for an n8n automated workflow rather than a standard candidate resume. While it shows competence in workflow automation and LLM integration, it does not demonstrate practical experience in core Data Analyst requirements such as Python, SQL, Power BI, or data visualization.",
+        "explanation": "Aryan is a Full-Stack Software Developer focused on web technologies (React, Spring Boot). While he has SQL knowledge, he lacks core Data Analyst qualifications, specifically Python, Power BI, and hands-on data visualization experience.",
+        "success": true
+    },
+    {
+        "candidate_name": "Dr. Elena Rostova",
+        "match_score": 30,
+        "key_strengths": [
+            "Strong technical background and deep expertise in Python-based engineering",
+            "Advanced academic and production background in complex software systems and ML"
+        ],
+        "missing_skills": [
+            "SQL",
+            "Power BI",
+            "Data Visualization"
+        ],
+        "final_verdict": "Not a Fit",
+        "explanation": "Dr. Rostova is an exceptionally skilled Senior AI Infrastructure Engineer, but her profile is a major role mismatch for a Data Analyst position. Her resume lacks explicitly required core analyst tools such as SQL, Power BI, and data visualization experience.",
+        "success": true
+    },
+    {
+        "candidate_name": "Riddhi Bagkar",
+        "match_score": 85,
+        "key_strengths": [
+            "Proficient in Python and key data manipulation/visualization libraries (Pandas, NumPy, Matplotlib, Seaborn)",
+            "Hands-on SQL experience with databases like MySQL and Oracle SQL",
+            "Direct Data Analyst internship experience involving data cleaning, EDA, Excel, and Power BI visualization"
+        ],
+        "missing_skills": [
+            "Advanced Power BI features (DAX, complex data modeling, dynamic dashboarding)",
+            "Enterprise-level Data Warehousing or ETL process experience"
+        ],
+        "final_verdict": "Strong Fit",
+        "explanation": "Riddhi covers all key technical skills listed in the job description (Python, SQL, Power BI, and Data Visualization) and has relevant practical experience as a Data Analyst Intern.",
         "success": true
     }
 ]
